@@ -1,5 +1,5 @@
 import React from 'react'
-import Gallery from 'react-grid-gallery';
+// import Gallery from 'react-grid-gallery';
 
 const ImageGallery = ({images}) => {
   const IMAGES = images
@@ -11,7 +11,7 @@ const ImageGallery = ({images}) => {
                     width: "100%",
                     border: "1px solid #ddd",
                     overflow: "auto"}}></div>
-      <Gallery images={IMAGES} enableImageSelection={false} enableLightbox={false}/>
+      {/* <Gallery images={IMAGES} enableImageSelection={false} enableLightbox={false}/> */}
     </div>
   )
 }
