@@ -98,16 +98,10 @@ const App = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link href="#" as="span">
-              <Link to="/" className="link">Etusivu</Link>
-            </Nav.Link>
-            <Nav.Link href="#" as="span">
-              <Link to="/tasks" className="link">Tehtävät</Link>
+              <Link to="/" className="link">Home</Link>
             </Nav.Link>
             <Nav.Link href="#" as="span">
               <Link to="/user" className="link">Oma sivu</Link>
-            </Nav.Link>
-            <Nav.Link href="#" as="span">
-              <Link to="/gallery" className="link">Galleria</Link>
             </Nav.Link>
             <Nav.Link href="/user" as="span">
               {user
@@ -139,13 +133,8 @@ const App = () => {
         </Route>
         <Route path="/">
           <Home />
-
         </Route>
-      </Switch>    
-      <div>
-        <br />
-        {/* <em>Sivujen toteutus: Mitavain</em> */}
-      </div>
+      </Switch>
     </div>
   )
 }
