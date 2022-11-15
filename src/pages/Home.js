@@ -15,6 +15,7 @@ const Home = () => {
   useEffect( () => {
     getVideos()
   },[])
+  console.log(videos)
   return (
     <div className="Home">
       <VideoUploading />
