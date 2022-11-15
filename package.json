@@ -45,7 +45,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://54.93.218.0:3003/",
+  "proxy": "https://aws-network-project.herokuapp.com/",
   "devDependencies": {
     "cross-env": "^7.0.3",
     "css-loader": "^4.3.0",
