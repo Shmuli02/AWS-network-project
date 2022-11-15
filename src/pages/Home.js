@@ -1,13 +1,31 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import ReactPlayer from 'react-player'
 import VideoUploading from '../components/VideoUploading';
+import uploadService from '../services/uploads';
 
 
-const Home = () => (
-  <div className="Home">
-    <ReactPlayer url='https://hello-tomi.s3.eu-central-1.amazonaws.com/IMG_7318.MOV' controls="True" />
-    <VideoUploading />
-  </div>
-)
+const Home = () => {
+  const [videos, setVideos] = useState([])
+
+  async function getVideos() {
+    const videos = await uploadService.getAll()
+    setVideos(videos)
+  }
+
+  useEffect( () => {
+    getVideos()
+  },[])
+  return (
+    <div className="Home">
+      <VideoUploading />
+      {videos.map(video =>
+        <div>
+          <ReactPlayer url={video.url} controls="True" />
+        </div>
+      )}
+      
+    </div>
+    )
+  }
 
 export default Home
